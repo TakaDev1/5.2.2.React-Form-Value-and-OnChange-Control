@@ -5,13 +5,14 @@ const FormJson = () => {
   const { form, handleChangeForm } = useHandleForm();
 
   return (
-    <div>
+    <div className="space-y-2">
       <input
         type="text"
         name="name"
         value={form.name}
         onChange={handleChangeForm}
         placeholder="名前"
+        className="text-white border"
       />
       <input
         type="email"
@@ -19,6 +20,7 @@ const FormJson = () => {
         value={form.email}
         onChange={handleChangeForm}
         placeholder="メールアドレス"
+        className="text-white border"
       />
       <input
         type="number"
@@ -26,8 +28,9 @@ const FormJson = () => {
         value={form.age}
         onChange={handleChangeForm}
         placeholder="年齢"
+        className="text-white border"
       />
-      <pre>{JSON.stringify(form, null, 2)}</pre>
+      <pre className="text-white">{JSON.stringify(form, null, 2)}</pre>
     </div>
   );
 };
